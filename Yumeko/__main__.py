@@ -75,7 +75,7 @@ def get_readable_time(seconds: int) -> str:
 YUMEKO_IMG = "https://telegra.ph/file/e0040466048302df1a451.mp4"
 
 PM_START_TEXT = """
-**Hey I am Enmu** [ㅤ](https://telegra.ph/file/6054e522b735711d4633f.jpg)
+**Hey I am Rengoku** [ㅤ](https://telegra.ph/file/5828512d0e3430f789b46.mp4)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
 **×I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
@@ -84,7 +84,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="➕ Add Yumeko To Your group ➕", url="http://t.me/?startgroup=true"),
+        InlineKeyboardButton(text="➕ Add Rengoku To Your group ➕", url="http://t.me/?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="About", callback_data="yumeko_"),
@@ -101,7 +101,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-**Main commands:**  [ㅤ](https://telegra.ph/file/efdee100cc31b4b3e0be2.mp4)
+**Main commands:**  [ㅤ](https://telegra.ph/file/5828512d0e3430f789b46.mp4)
 ❂ /start: Starts me! You've probably already used this.
 ❂ /help: Sends this message; I'll tell you more about myself.
 
@@ -222,7 +222,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.raboutvideo(
-            YUMEKO_IMG, caption= "Baka, I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            YUMEKO_IMG, caption= "Rengoku Sama is awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -355,9 +355,9 @@ def help_button(update, context):
 
 
 @run_async
-def yumeko_about_callback(update, context):
+def Rengoku_about_callback(update, context):
     query = update.callback_query
-    if query.data == "yumeko_":
+    if query.data == "rengoku_":
         query.message.edit_text(
             text="""Hi again! I'am an anime themed group management bot built to help you manage your group easily.\n
                     \nI can do lot of stuff, some of them are:
@@ -406,20 +406,20 @@ def yumeko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="yumeko_admin"),
-                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="yumeko_notes"),
+                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="rengoku_admin"),
+                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="rengoku_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="yumeko_support"),
+                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="rengoku_support"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="yumeko_back"),
+                    InlineKeyboardButton(text="Back", callback_data="rengoku_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "yumeko_admin":
+    elif query.data == "rengoku_admin":
         query.message.edit_text(
             text=f"**──「 Basic Guide 」──**"
             f"\n\n/play (song name) - play song from youtube"
@@ -432,11 +432,11 @@ def yumeko_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="rengoku_basichelp")]]
             ),
         )
 
-    elif query.data == "yumeko_notes":
+    elif query.data == "rengoku_notes":
         query.message.edit_text(
             text=f"──「 Advanced CMD 」──\n\n"
             f"/start (in group) - see the bot alive status"
@@ -446,10 +446,10 @@ def yumeko_about_callback(update, context):
             f"\n/id - show the group/user id & other",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="rengoku_basichelp")]]
             ),
         )
-    elif query.data == "yumeko_support":
+    elif query.data == "rengoku_support":
         query.message.edit_text(
             text=f"──「 Admin CMD 」──\n"
             f"\n/player - show the music playing status"
@@ -468,13 +468,13 @@ def yumeko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="yumeko_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="rengoku_basichelp"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "yumeko_credit":
+    elif query.data == "rengoku_credit":
         query.message.edit_text(
             text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Lᴜɴᴀ Dᴇᴠ's` </b>\n"
             f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ YUMEKO",
@@ -497,7 +497,7 @@ def yumeko_about_callback(update, context):
             ),
         )
 
-    elif query.data == "yumeko_setup":
+    elif query.data == "rengoku_setup":
         query.message.edit_text(
             text=f"｢ Setup Guide 」\n"
                  f"\nYou can add me to your group by clicking this link and selecting the chat.\n"
